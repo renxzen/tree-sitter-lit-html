@@ -365,11 +365,11 @@
     },
     "attribute_name": {
       "type": "PATTERN",
-      "value": "[^<>\"'/=\\s]+"
+      "value": "[^<>\"/=\\s]+"
     },
     "attribute_value": {
       "type": "PATTERN",
-      "value": "[^<>\"'=\\s]+"
+      "value": "[^<>\"=\\s]+"
     },
     "entity": {
       "type": "PATTERN",
@@ -378,36 +378,6 @@
     "quoted_attribute_value": {
       "type": "CHOICE",
       "members": [
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "'"
-            },
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "PATTERN",
-                    "value": "[^']+"
-                  },
-                  "named": true,
-                  "value": "attribute_value"
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
-            },
-            {
-              "type": "STRING",
-              "value": "'"
-            }
-          ]
-        },
         {
           "type": "SEQ",
           "members": [
@@ -498,3 +468,4 @@
   "inline": [],
   "supertypes": []
 }
+
