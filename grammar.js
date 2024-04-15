@@ -118,6 +118,7 @@ module.exports = grammar({
         choice(
           $.attribute_value,
           $.quoted_attribute_value,
+          $.js_expression_value,
         ),
       )),
     ),
@@ -125,6 +126,8 @@ module.exports = grammar({
     attribute_name: _ => /[^<>"/=\s]+/,
 
     attribute_value: _ => /[^<>"=\s]+/,
+
+    js_expression_value : _ => /\${[^}]+}/,
 
     // An entity can be named, numeric (decimal), or numeric (hexacecimal). The
     // longest entity name is 29 characters long, and the HTML spec says that

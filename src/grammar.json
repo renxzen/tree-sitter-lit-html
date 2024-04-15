@@ -351,6 +351,10 @@
                     {
                       "type": "SYMBOL",
                       "name": "quoted_attribute_value"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "js_expression_value"
                     }
                   ]
                 }
@@ -370,6 +374,10 @@
     "attribute_value": {
       "type": "PATTERN",
       "value": "[^<>\"=\\s]+"
+    },
+    "js_expression_value": {
+      "type": "PATTERN",
+      "value": "\\${[^}]+}"
     },
     "entity": {
       "type": "PATTERN",
