@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-html
+module github.com/renxzen/tree-sitter-lit-html
 
 go 1.23
 
